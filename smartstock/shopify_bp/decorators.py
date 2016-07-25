@@ -22,10 +22,9 @@ def shopify_auth_required(f):
                 secret=current_app.config['SHOPIFY_SHARED_SECRET'])
             try:
                 logging.debug("auth required decorator 1")
-                shopify_session = \
-                    shopify.Session.validate_params(request.args)
+                shopify_session = shopify.Session.validate_params(request.args)
                     
-                logging.debug("*****found session:" + request.args)
+                #logging.debug("*****found session:" + request.args)
             except Exception as ex:
                 #logging.debug("exception: redirect to install" + str(ex))
                 
@@ -63,7 +62,7 @@ def shopify_auth_required(f):
                 termporily changed to just get the first record.
                 '''
                 
-                shop = Shop.query.filter_by(shop=session['shopify_url']).first()
+                shop = Shop.query.filter_by(shop=session['shopify_url']).one()
                 
                
             except Exception as ex:

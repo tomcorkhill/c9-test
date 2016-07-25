@@ -54,4 +54,9 @@ test/tmp
 test/version_tmp
 .yardoc
 _yardoc
+.smartstock/config.py
+.idea/.name
+.idea/*
+venv/*
 smartstock/config.py
+

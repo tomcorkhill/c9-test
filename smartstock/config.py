@@ -8,8 +8,8 @@ class DefaultConfig(object):
     DEBUG = True
     TESTING = False
 
-    IP = os.getenv('IP', '0.0.0.0')
-    PORT = int( os.getenv('PORT', 8080))
+    IP = os.getenv('IP', '127.0.0.1')
+    PORT = int( os.getenv('PORT', 8000))
     # app.run(port=port,host=host)
     
     SECRET_KEY = 'secret key'
@@ -21,5 +21,5 @@ class DefaultConfig(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_ECHO = True
 
-    SHOPIFY_API_KEY = 'SHOPIFY_API_KEY_HERE'
-    SHOPIFY_SHARED_SECRET = 'SHARED_SECRET'
+    SHOPIFY_API_KEY = 'd07123086349e90cbf615cb52da784cc'
+    SHOPIFY_SHARED_SECRET = '9ba2a3d8d8b082ce4c5575677ca00f12'
